@@ -1,11 +1,9 @@
 // Breakpoints
-@mixin media-query($width, $type: min) {
-    @if map_has_key($breakpoints, $width) {
-        $width: map_get($breakpoints, $width);
-        @if $type == max {
-            $width: $width - 1px;
-        }
-        @media only screen and (#{$type}-width: $width) {
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $value: map-get($breakpoints, $breakpoint);
+         
+        @media screen and (min-width: $value) {
             @content;
         }
     }
@@ -22,6 +20,14 @@
     @if $line-height {
         line-height: ($line-height / $size); // line height in px is relative to the current fonts size, not the base font size
     }
+}
+
+// Auto default font setup
+@mixin font-default ($map, $scale) {
+    font-family: map-get(map-get($map, $scale), font);
+    @include font(map-get(map-get($map, $scale), size), map-get(map-get($map, $scale), line-height));
+    font-weight: map-get(map-get($map, $scale), weight);
+    color: map-get(map-get($map, $scale), color);
 }
 
 // Box Sizing Reset your elements box model

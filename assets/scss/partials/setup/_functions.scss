@@ -17,3 +17,7 @@
 @function px2em($px, $base: $base-font-size) {
     @return ($px / $base) * 1em;
 }
+
+@function mapNest($map, $child, $grandchild) {
+	@return map-get(map-get($map, $child), $grandchild);
+}
