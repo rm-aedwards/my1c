@@ -8,6 +8,13 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
+body {
+  font-family: "Din Pro", -apple-system, Arial, "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2941176471;
+  font-weight: 400;
+  color: #e7131a; }
+
 .heading-alpha {
   font-family: "Just Us", -apple-system, Arial, "Helvetica Neue", sans-serif;
   font-size: 2.2352941176rem;
