@@ -1,5 +1,9 @@
 // _typography.scss
 
+p {
+	@include font-default ($type-scale, "epsilon");
+}
+
 @each $level, $scale in $type-scale {
     .heading-#{$level} {
     	font-family: map-get($scale, font);
@@ -9,7 +13,11 @@
     }
 }
 
-@include respond-to(md) {
+@include respond-to(lg) {
+	p {
+		@include font-default ($type-scale--lg, "epsilon");
+	}
+
 	@each $level, $scale in $type-scale--lg {
 	    .heading-#{$level} {
 	    	font-family: map-get($scale, font);

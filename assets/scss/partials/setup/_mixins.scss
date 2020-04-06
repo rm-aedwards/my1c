@@ -11,6 +11,7 @@
 
 // Converts pixels to rems based on the base font size
 @mixin font-size($px) {
+    font-size: $px * 1px;
     font-size: px2rem($px);
 }
 
