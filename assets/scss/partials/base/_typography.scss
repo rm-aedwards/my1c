@@ -1,0 +1,21 @@
+// _typography.scss
+
+@each $scale, $name in $type-scale {
+    .heading-#{$scale} {
+    	font-family: map-get($name, font);
+        @include font(map-get($name, size), map-get($name, line-height));
+        font-weight: map-get($name, weight);
+        color: map-get($name, color);
+    }
+}
+
+@media (min-width: map-get($breakpoints, md)) {
+	@each $scale, $name in $type-scale {
+	    .heading-#{$scale} {
+	    	font-family: map-get($name, font);
+	        @include font(map-get($name, size), map-get($name, line-height));
+	        font-weight: map-get($name, weight);
+	        color: map-get($name, color);
+	    }
+	}
+}

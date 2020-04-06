@@ -1,0 +1,19 @@
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@function px2rem($px, $base: $base-font-size) {
+    @return ($px / $base) * 1rem;
+}
+
+@function px2em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}

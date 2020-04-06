@@ -1,0 +1,125 @@
+$breakpoints: (
+    "sm":	576px,
+    "md":	768px,
+    "lg": 	992px,
+    "xl":	1200px
+);
+
+// Primary palette
+$brand-primary:		rgb(231,19,26); // Brand primary
+$brand-secondary:	rgb(70,21,77); // Brand secondary
+$matterhorn:		rgb(66,56,59); // Matterhorn
+$alabaster:			rgb(248,248,248); // Alabaster
+$white:				rgb(255,255,255); // White
+
+// Secondary palette
+$fuchsia-pink:		rgb(166,84,159); // Fuchsia Pink
+$burning-orange:	rgb(255,131,67); // Burning Orange
+$sun:				rgb(250,166,27); // Sun
+$jewel:				rgb(26,125,92); // Jewel
+$seagull:			rgb(98,181,229); // Seagull
+$astral:			rgb(55,120,162); // Astral
+
+// Fonts
+$system-font-stack: 	-apple-system, Arial, "Helvetica Neue", sans-serif;
+$body-font-stack: 		"Din Pro", $system-font-stack;
+$heading-font-stack: 	"Din Pro", $system-font-stack;
+$feature-font-stack: 	"Just Us", $system-font-stack;
+
+// Weights
+$normal: 	400;
+$medium:	600;
+$bold: 		700;
+
+// Sizes
+$base-font-size: 17;
+
+$type-scale: (
+	"alpha": (
+		font: 			$feature-font-stack,
+		size: 			38,
+		line-height: 	44,
+		weight: 		$bold,
+		color: 			$brand-secondary
+	),
+	"beta":	 (
+		font: 			$feature-font-stack,
+		size: 			30,
+		line-height: 	33,
+		weight: 		$bold,
+		color: 			$brand-primary
+	),
+	"gamma": (
+		font: 			$heading-font-stack,
+		size: 			20,
+		line-height: 	27,
+		weight: 		$bold,
+		color: 			$brand-primary
+	),
+	"delta": (
+		font: 			$heading-font-stack,
+		size: 			17,
+		line-height: 	22,
+		weight: 		$bold,
+		color: 			$brand-primary
+	),
+	"epsilon": (
+		font: 			$body-font-stack,
+		size: 			17,
+		line-height: 	22,
+		weight: 		$normal,
+		color: 			$brand-primary
+	),
+	"zeta":	 (
+		font: 			$body-font-stack,
+		size: 			17,
+		line-height: 	22,
+		weight: 		$normal,
+		color: 			$brand-primary
+	)
+);
+
+$type-scale--lg: (
+	"alpha": (
+		font: 			$feature-font-stack,
+		size: 			55,
+		line-height: 	63,
+		weight: 		$bold,
+		color: 			$brand-secondary
+	),
+	"beta":	 (
+		font: 			$feature-font-stack,
+		size: 			40,
+		line-height: 	63,
+		weight: 		$bold,
+		color: 			$brand-primary
+	),
+	"gamma": (
+		font: 			$feature-font-stack,
+		size: 			28,
+		line-height: 	30,
+		weight: 		$bold,
+		color: 			$brand-primary
+	),
+	"delta": (
+		font: 			$heading-font-stack,
+		size: 			20,
+		line-height: 	30,
+		weight: 		$medium,
+		color: 			$brand-primary
+	),
+	"epsilon": (
+		font: 			$body-font-stack,
+		size: 			17,
+		line-height: 	22,
+		weight: 		$normal,
+		color: 			$brand-primary
+	),
+	"zeta":	 (
+		font: 			$body-font-stack,
+		size: 			17,
+		line-height: 	22,
+		weight: 		$normal,
+		color: 			$brand-primary
+	)
+);

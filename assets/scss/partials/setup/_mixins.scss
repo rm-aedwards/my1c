@@ -1,0 +1,73 @@
+// Breakpoints
+@mixin media-query($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+// Converts pixels to rems based on the base font size
+@mixin font-size($px) {
+    font-size: px2rem($px);
+}
+
+// Font size and line height px to rems
+@mixin font($size, $line-height: false) {
+    @include font-size($size);
+    @if $line-height {
+        line-height: ($line-height / $size); // line height in px is relative to the current fonts size, not the base font size
+    }
+}
+
+// Box Sizing Reset your elements box model
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
+// Clearfix
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Border radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg colour from leaking outside the border: */
+}
+
+// Shadows
+@mixin box-shadow($top, $left, $blur, $colour, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $colour;
+    -moz-box-shadow:inset $top $left $blur $colour;
+    box-shadow:inset $top $left $blur $colour;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $colour;
+    -moz-box-shadow: $top $left $blur $colour;
+    box-shadow: $top $left $blur $colour;
+  }
+}
+
+// Placeholder
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
