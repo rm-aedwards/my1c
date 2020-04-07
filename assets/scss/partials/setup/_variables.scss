@@ -40,42 +40,46 @@ $type-scale: (
 		size: 			38,
 		line-height: 	44,
 		weight: 		$bold,
-		color: 			$brand-secondary
+		color: 			$brand-secondary,
+		heading-level:	1
 	),
 	"beta":	 (
 		font: 			$feature-font-stack,
 		size: 			30,
 		line-height: 	33,
 		weight: 		$bold,
-		color: 			$brand-primary
+		color: 			$brand-secondary,
+		heading-level:	2
 	),
 	"gamma": (
 		font: 			$heading-font-stack,
 		size: 			20,
 		line-height: 	27,
 		weight: 		$bold,
-		color: 			$brand-primary
+		color: 			$brand-secondary,
+		heading-level:	3
 	),
 	"delta": (
 		font: 			$heading-font-stack,
 		size: 			17,
 		line-height: 	22,
 		weight: 		$bold,
-		color: 			$brand-primary
+		color: 			$brand-secondary,
+		heading-level:	4
 	),
 	"epsilon": (
 		font: 			$body-font-stack,
 		size: 			17,
 		line-height: 	22,
 		weight: 		$normal,
-		color: 			$brand-primary
+		color: 			$matterhorn,
 	),
 	"zeta":	 (
 		font: 			$body-font-stack,
 		size: 			17,
 		line-height: 	22,
 		weight: 		$normal,
-		color: 			$brand-primary
+		color: 			$matterhorn
 	)
 );
 
@@ -85,41 +89,45 @@ $type-scale--lg: (
 		size: 			55,
 		line-height: 	63,
 		weight: 		$bold,
-		color: 			$brand-secondary
+		color: 			$brand-secondary,
+		heading-level:	1
 	),
 	"beta":	 (
 		font: 			$feature-font-stack,
 		size: 			40,
 		line-height: 	63,
 		weight: 		$bold,
-		color: 			$brand-primary
+		color: 			$brand-secondary,
+		heading-level:	2
 	),
 	"gamma": (
 		font: 			$feature-font-stack,
 		size: 			28,
 		line-height: 	30,
 		weight: 		$bold,
-		color: 			$brand-primary
+		color: 			$brand-secondary,
+		heading-level:	3
 	),
 	"delta": (
 		font: 			$heading-font-stack,
 		size: 			20,
 		line-height: 	30,
 		weight: 		$medium,
-		color: 			$brand-primary
+		color: 			$brand-secondary,
+		heading-level:	4
 	),
 	"epsilon": (
 		font: 			$body-font-stack,
 		size: 			17,
 		line-height: 	22,
 		weight: 		$normal,
-		color: 			$brand-primary
+		color: 			$matterhorn
 	),
 	"zeta":	 (
 		font: 			$body-font-stack,
 		size: 			17,
 		line-height: 	22,
 		weight: 		$normal,
-		color: 			$brand-primary
+		color: 			$matterhorn
 	)
 );
