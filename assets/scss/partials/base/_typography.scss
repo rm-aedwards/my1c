@@ -1,52 +1,38 @@
 // _typography.scss
 
 p {
-	@include font-default ($type-scale, "epsilon");
+	@include font-default-config($type-config, "epsilon");
 }
 
-@each $level, $scale in $type-scale {
+@each $level, $scale in $type-config {
 	@if map-has-key($scale, heading-level) {
 		h#{map-get($scale, heading-level)},
 		.heading-#{$level} {
-	    	font-family: map-get($scale, font);
-	        @include font(map-get($scale, size), map-get($scale, line-height));
-	        font-weight: map-get($scale, weight);
-	        color: map-get($scale, color);
+	        @include font-default-config($type-config, $level);
 	    }
 	}
 	@else {
 	    .heading-#{$level} {
-	    	test: map-get(map-get($type-scale, $level), $scale);
-	    	font-family: map-get($scale, font);
-	        @include font(map-get($scale, size), map-get($scale, line-height));
-	        font-weight: map-get($scale, weight);
-	        color: map-get($scale, color);
+	    	@include font-default-config($type-config, $level);
 	    }
 	}
 }
 
 @include respond-to(lg) {
 	p {
-		@include font-default ($type-scale--lg, "epsilon");
+		@include font-default-config($type-config--lg, "epsilon");
 	}
 
-	@each $level, $scale in $type-scale--lg {
+	@each $level, $scale in $type-config--lg {
 		@if map-has-key($scale, heading-level) {
 			h#{map-get($scale, heading-level)},
 			.heading-#{$level} {
-		    	font-family: map-get($scale, font);
-		        @include font(map-get($scale, size), map-get($scale, line-height));
-		        font-weight: map-get($scale, weight);
-		        color: map-get($scale, color);
+		        @include font-default-config($type-config--lg, $level);
 		    }
 		}
 		@else {
 		    .heading-#{$level} {
-		    	test: map-get(map-get($type-scale, $level), $scale);
-		    	font-family: map-get($scale, font);
-		        @include font(map-get($scale, size), map-get($scale, line-height));
-		        font-weight: map-get($scale, weight);
-		        color: map-get($scale, color);
+		    	@include font-default-config($type-config--lg, $level);
 		    }
 		}
 	}

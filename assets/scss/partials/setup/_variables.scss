@@ -1,9 +1,18 @@
+// 
+// BREAKPOINTS
+// 
+
 $breakpoints: (
     "sm":	576px,
     "md":	768px,
     "lg": 	992px,
     "xl":	1200px
 );
+
+
+// 
+// COLOURS
+// 
 
 // Primary palette
 $brand-primary:		rgb(231,19,26); // Brand primary
@@ -14,11 +23,17 @@ $white:				rgb(255,255,255); // White
 
 // Secondary palette
 $fuchsia-pink:		rgb(166,84,159); // Fuchsia Pink
+$vivid-red:			rgb(231,19,26); // Vivid red - Brand primary
 $burning-orange:	rgb(255,131,67); // Burning Orange
 $sun:				rgb(250,166,27); // Sun
 $jewel:				rgb(26,125,92); // Jewel
 $seagull:			rgb(98,181,229); // Seagull
 $astral:			rgb(55,120,162); // Astral
+
+
+// 
+// TYPOGRAPHY
+// 
 
 // Fonts
 $system-font-stack: 	-apple-system, Arial, "Helvetica Neue", sans-serif;
@@ -34,7 +49,7 @@ $bold: 		700;
 // Sizes
 $base-font-size: 17;
 
-$type-scale: (
+$type-config: (
 	"alpha": (
 		font: 			$feature-font-stack,
 		size: 			38,
@@ -83,7 +98,7 @@ $type-scale: (
 	)
 );
 
-$type-scale--lg: (
+$type-config--lg: (
 	"alpha": (
 		font: 			$feature-font-stack,
 		size: 			55,

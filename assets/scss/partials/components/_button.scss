@@ -1,31 +1,255 @@
 // _button.css
 
 .btn {
+	display: inline-block;
+	font-weight: $medium;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	@include button(tint($jewel, 90), $jewel);
+
+	border-radius: 		.25rem;
+	font-size: 			1rem;
+	line-height: 		1.5;
+	padding: 			px2rem(9) px2rem(19);
+
+	@include state(hover) {
+		@include button($jewel, $jewel, $white);
+	};
+
+	@include state(focus) {
+		@include button(shade($jewel, 20), shade($jewel, 20), $white);
+		box-shadow: 0 0 0.125rem 0.125rem rgba($sun, .75);
+	};
+
+	&:not(:disabled):not(.disabled) {
+		@include state(active) {
+			@include state(focus) {
+				@include button(shade($jewel, 20), shade($jewel, 20), $white);
+				box-shadow: 0 0 0.125rem 0.125rem rgba($sun, .75);
+			};
+		};
+
+		@include state(focus) {
+			@include button(shade($jewel, 20), shade($jewel, 20), $white);
+			box-shadow: 0 0 0.125rem 0.125rem rgba($sun, .75);
+		};
+	}
+
+	@include state(disabled) {
+		@include button(tint($matterhorn, 80), tint($matterhorn, 50), $matterhorn);
+	};
+
+	@include state(active) {
+		@include button($jewel, $jewel, $white);
+	};
+
 	&-primary {
-		
+		@include button(tint($jewel, 90), $jewel);
+
+		@include state(hover) {
+			@include button($jewel, $jewel, $white);
+		};
+
+		@include state(focus) {
+			@include button(shade($jewel, 20), shade($jewel, 20), $white);
+		};
+
+		&:not(:disabled):not(.disabled) {
+			@include state(active) {
+				@include state(focus) {
+					@include button(shade($jewel, 20), shade($jewel, 20), $white);
+				};
+			};
+
+			@include state(focus) {
+				@include button(shade($jewel, 20), shade($jewel, 20), $white);
+			};
+		}
+
+		@include state(active) {
+			@include button($jewel, $jewel, $white);
+		};
 	}
 	&-secondary {
+		@include button(tint($fuchsia-pink, 90), $fuchsia-pink);
 		
+		@include state(hover) {
+			@include button($fuchsia-pink, $fuchsia-pink, $white);
+		};
+
+		@include state(focus) {
+			@include button(shade($fuchsia-pink, 20), shade($fuchsia-pink, 20), $white);
+		};
+
+		&:not(:disabled):not(.disabled) {
+			@include state(active) {
+				@include state(focus) {
+					@include button(shade($fuchsia-pink, 20), shade($fuchsia-pink, 20), $white);
+				};
+			};
+
+			@include state(focus) {
+				@include button(shade($fuchsia-pink, 20), shade($fuchsia-pink, 20), $white);
+			};
+		}
+
+		@include state(active) {
+			@include button($fuchsia-pink, $fuchsia-pink, $white);
+		};
 	}
 	&-success {
+		@include button(tint($jewel, 90), $jewel);
 		
+		@include state(hover) {
+			@include button($jewel, $jewel, $white);
+		};
+
+		@include state(focus) {
+			@include button(shade($jewel, 20), shade($jewel, 20), $white);
+		};
+
+		&:not(:disabled):not(.disabled) {
+			@include state(active) {
+				@include state(focus) {
+					@include button(shade($jewel, 20), shade($jewel, 20), $white);
+				};
+			};
+
+			@include state(focus) {
+				@include button(shade($jewel, 20), shade($jewel, 20), $white);
+			};
+		}
+
+		@include state(active) {
+			@include button($jewel, $jewel, $white);
+		};
 	}
 	&-danger {
+		@include button(tint($vivid-red, 90), $vivid-red);
 		
+		@include state(hover) {
+			@include button($vivid-red, $vivid-red, $white);
+		};
+
+		@include state(focus) {
+			@include button(shade($vivid-red, 20), shade($vivid-red, 20), $white);
+		};
+
+		&:not(:disabled):not(.disabled) {
+			@include state(active) {
+				@include state(focus) {
+					@include button(shade($vivid-red, 20), shade($vivid-red, 20), $white);
+				};
+			};
+
+			@include state(focus) {
+				@include button(shade($vivid-red, 20), shade($vivid-red, 20), $white);
+			};
+		}
+
+		@include state(active) {
+			@include button($vivid-red, $vivid-red, $white);
+		};
 	}
 	&-warning {
+		@include button(tint($sun, 90), $sun);
 		
+		@include state(hover) {
+			@include button($sun, $sun, $matterhorn);
+		};
+
+		@include state(focus) {
+			@include button(shade($sun, 20), shade($sun, 20), $matterhorn);
+		};
+
+		&:not(:disabled):not(.disabled) {
+			@include state(active) {
+				@include state(focus) {
+					@include button(shade($sun, 20), shade($sun, 20), $matterhorn);
+				};
+			};
+
+			@include state(focus) {
+				@include button(shade($sun, 20), shade($sun, 20), $matterhorn);
+			};
+		}
+
+		@include state(active) {
+			@include button($sun, $sun, $matterhorn);
+		};
 	}
 	&-info {
+		@include button(tint($seagull, 90), $seagull);
 		
-	}
-	&-light {
-		
-	}
-	&-dark {
-		
+		@include state(hover) {
+			@include button($seagull, $seagull, $white);
+		};
+
+		@include state(focus) {
+			@include button(shade($seagull, 20), shade($seagull, 20), $white);
+		};
+
+		&:not(:disabled):not(.disabled) {
+			@include state(active) {
+				@include state(focus) {
+					@include button(shade($seagull, 20), shade($seagull, 20), $white);
+				};
+			};
+
+			@include state(focus) {
+				@include button(shade($seagull, 20), shade($seagull, 20), $white);
+			};
+		}
+
+		@include state(active) {
+			@include button($seagull, $seagull, $white);
+		};
 	}
 	&-link {
+		@include button(transparent, transparent, $fuchsia-pink);
 		
+		@include state(hover) {
+			@include button(transparent, transparent, $fuchsia-pink);
+			text-decoration: underline;
+		};
+
+		@include state(focus) {
+			@include button(transparent, transparent, $fuchsia-pink);
+			text-decoration: underline;
+		};
+
+		&:not(:disabled):not(.disabled) {
+			@include state(active) {
+				@include state(focus) {
+					@include button(transparent, transparent, $fuchsia-pink);
+					text-decoration: underline;
+				};
+			};
+
+			@include state(focus) {
+				@include button(transparent, transparent, $fuchsia-pink);
+				text-decoration: underline;
+			};
+		}
+
+		@include state(active) {
+			@include button(transparent, transparent, $fuchsia-pink);
+		};
+	}
+}
+
+@include respond-to(lg) {
+	.btn {
+		padding: px2rem(9) px2rem(29);
+		font-size: 1rem;
+		line-height: 1.5;
+		border-radius: .25rem;
 	}
 }

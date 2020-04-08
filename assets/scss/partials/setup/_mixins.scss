@@ -9,6 +9,14 @@
     }
 }
 
+// States as pseudo and class
+@mixin state($state) {
+    &.#{$state},
+    &:#{$state} {
+      @content;
+    }
+}
+
 // Converts pixels to rems based on the base font size
 @mixin font-size($px) {
     font-size: $px * 1px;
@@ -24,11 +32,11 @@
 }
 
 // Auto default font setup
-@mixin font-default ($map, $scale) {
+@mixin font-default-config($map, $scale) {
+    color: map-get(map-get($map, $scale), color);
     font-family: map-get(map-get($map, $scale), font);
     @include font(map-get(map-get($map, $scale), size), map-get(map-get($map, $scale), line-height));
     font-weight: map-get(map-get($map, $scale), weight);
-    color: map-get(map-get($map, $scale), color);
 }
 
 // Box Sizing Reset your elements box model
@@ -68,6 +76,13 @@
     -moz-box-shadow: $top $left $blur $colour;
     box-shadow: $top $left $blur $colour;
   }
+}
+
+// Button default
+@mixin button($background, $border, $color: $border) {
+  background-color: $background;
+  border-color:     $border;
+  color:            $color;
 }
 
 // Placeholder

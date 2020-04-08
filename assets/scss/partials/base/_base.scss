@@ -1,14 +1,14 @@
 // _base.css
 
 html {
-	@include font-default ($type-scale, "epsilon");
+	@include font-default-config($type-config, "epsilon");
     font-size: 100%;
     -ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
 
 body {
-	@include font-default ($type-scale, "epsilon");
+	@include font-default-config($type-config, "epsilon");
 }
 
 div {
